@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Website</title>
+<style>
+  /* Add some basic styling */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+// Adding SkipNavLink component to direct the user to the main content
+<SkipNavLink>Skip to content</SkipNavLink>
+
+<div class="container">
+  <h2>Enter Your Travel Budget</h2>
+  <label for="budget">Budget:</label>
+  <input type="number" id="budget" placeholder="Enter your budget...">
+  <button onclick="submitBudget()">Submit</button>
+</div>
+
+// Adding SkipNavContent component to signify the main content
+<App>
+  <div>
+    <SkipNavContent />
+    // The main content below
+  </div>
+</App>
+
+<script>
+  function submitBudget() {
+    // Get the value of the budget input
+    var budget = document.getElementById("budget").value;
+    
+    // Do something with the budget value (e.g., send it to a server)
+    console.log("Budget entered:", budget);
+    
+    // You can add additional logic here, such as redirecting to another page
+  }
+</script>
+
+</body>
+</html>
